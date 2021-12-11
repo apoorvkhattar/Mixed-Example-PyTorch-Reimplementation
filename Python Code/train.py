@@ -119,22 +119,11 @@ def main():
     for epoch in range(args.train_epochs+1):
         model.train()
         for i, d in enumerate(tqdm.tqdm(train_dataloaders)):
-            try:
-                d1 = next(train_iterator)
-            except StopIteration:
-                train_iterator = iter(train_dataloaders)
-                d1 = next(train_iterator)
+            indx = torch.randperm(d[0].shape[0])
+            x1, y1 = d[0], d[1]
+            x2, y2 = x1[indx], y1[indx]
 
-            try:
-                d2 = next(train_iterator)
-            except StopIteration:
-                train_iterator = iter(train_dataloaders)
-                d2 = next(train_iterator)
-
-            x1, y1 = d1[0], d1[1]
-            x2, y2 = d2[0], d2[1]
-
-            x, y = augmentBatch((x1,y1), (x2,y2), augmentor, n_outputs)
+            x, y = augmentor((x1,y1), (x2,y2), n_outputs)
             x = x.float().to(device)
             y = y.float().to(device)
 

@@ -1,6 +1,6 @@
 # Mixed-Example-PyTorch-Reimplementation
 
-This is a reimplementation of [Improved Mixed-Example Data Augmentation in PyTorch](https://arxiv.org/pdf/1805.11272.pdf).
+This is a reimplementation of [Improved Mixed-Example Data Augmentation](https://arxiv.org/pdf/1805.11272.pdf) in PyTorch.
 
 ### Training Arguments
 

@@ -8,7 +8,7 @@ The arguments for the dataloader, optimizer and choice of augmentation method ar
 
 ### Results
 
-In the following table, we report the results of the baseline model and the two augmentation methods: VHMixup and VHBC+ on CIFAR10 dataset averaged over 5 runs. \\
+In the following table, we report the results of the baseline model and the two augmentation methods: VHMixup and VHBC+ on CIFAR10 dataset averaged over 5 runs.
         
 | Model  | Error |
 | ------------- | ------------- |
